@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Css Carpeta/style.css">
+    <link rel="stylesheet" href="Css Carpeta/perfil.css">
+    <link rel="stylesheet" href="Css Carpeta/skills.css">
+    <link rel="stylesheet" href="Css Carpeta/proyectos.css">
+    <link rel="stylesheet" href="Css Carpeta/contacto.css">
+    <script defer src="app.js"></script>
+</head>
+    <body>
+
+            <!--esto seria todo el menu de arriba-->
+            <header class="encabezado">
+                <nav class="navegacion">
+                    <!-- aca estaria la foto de perfil-->
+                    <a href="#" class="logo">
+                    <img src="Imagenes/Perfil.jpg" alt="programador" height="40" width="40">
+                    <div>
+                        Jorge Gauto<br />
+                    </div>
+                    </a>
+
+                    <!--botones para el adaptado a celulares-->
+                    <button class="abrir-menu" aria-label="Abrir Menu">
+                        <img src="Imagenes/abrir.png" alt="Abrir menu" width="40" height="40">
+                    </button>
+
+
+
+                    <ul class="menu">
+                        <button class="cerrar-menu" aria-label="Cerrar Menu">
+                            <img src="Imagenes/cerrar.png" alt="Cerrar Menu" height="40" width="40">
+                        </button>
+
+                        <li><a href="#perfil" class="seleccionado">Perfil</a></li>
+                        <li><a href="#trabajos">Proyectos</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+
+                </nav>
+            </header>
+
+
+            <!--de momento seria solo la presentacion-->
+        <div class="horizontal-padding vertical-padding">
+            <section class="perfil" id="perfil">
+                <div class="perfil-info">
+                    <h1 class="perfil-titulo">Hola, soy Jorge Gauto</h1>
+                    <p class="perfil-detalles">
+                        Este fue un proyecto escolar, en el cual nos dividiamos distintas secciones de una 
+                        institucion escolar. En mi grupo teniamos que dessarrollar la "Asistencia" de la institucion,
+                        para esto se tenia que tener en cuenta a los estudiantes, profesores, docentes, personal, etc. del nivel
+                        Primario, Secundario Y Terciario o Superior. En dicho trabajo como grupo nos pusimos la meta de 
+                        crear un sistema que facilite al docente tomar la asistencia de los estudiantes Y esta asistencia la 
+                        puedan ver dichos estudiantes a travez de una aplicacion, asi ellos estan al tanto de su estado.
+                        Dicho sistema tambien contaria con una "Base de Datos" para facilitar la recopilacion de datos, ya que en la
+                        institucion aun manejan informacion de manera fisica.
+                        Actualmente seguimos trabajando en el proyecto que avanza lentamente.
+                        
+                    </p>
+                    <a class="perfil-boton" href="" download> <!--aca iria mi curriculum con toda mi info y titulos que tengo, mejor si esta todo en ingles-->
+                        Descargar cv
+                    </a>
+                </div>
+
+                    <!--segunda foto personal, tiene que estar con el texto-->
+                    <!--uso span para que la linea se adapte al ancho de la img-->
+                    <span class="perfil-imagen-seccion">
+                        <img class="perfil-imagen" src="Imagenes/Perfil 2.jpg" alt="programador">
+                        <div class="perfil-linea"></div>
+                    </span>    
+            </section>
+        </div>
+
+        <!--experiencias en proyectos-->
+        <section class="proyectos" id="trabajos">
+            <img class="ola" src="Imagenes/wave.svg" alt="division">
+            <div class="cuerpo-proyectos">
+                <h2 class="titulo-experiencia">Experiencia</h2>
+                <div class="experiencia-grid">
+                    <div class="vacia"></div>
+                    <div class="linea"></div>
+                    <div class="experiencias">
+                        <div class="fecha-experiencia">2022-2023</div>
+                        <div class="empresa-experiencia">0.Code</div>
+                        <div class="rol-experiencia">Programador</div>
+                        <div class="descripcion-experiencia">Nos dividimos en grupos
+                            que cubrir distintas areas de administracion de un
+                            colegio, en mi caso me toco trabajar en la administracion
+                            de asistencias de la institucion. actualmente sigo trabajando en el proyecto.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <img class="ola-abajo" src="Imagenes/wave.svg" alt="division">
+        </section>
+
+
+        <div class="horizontal-padding vertical-padding">
+            <section class="skills" id="skills">
+                <h2 class="titulo-skills">Habilidades Y Herramientas</h2>
+                <ul class="lista-skills">
+                    <li class="skills-skill">HTML5</li>
+                    <li class="skills-skill">CSS</li>
+                    <li class="skills-skill">JavaScript</li>
+                    <li class="skills-skill">C#</li>
+                    <li class="skills-skill">Visual Studio Code</li>
+                    <li class="skills-skill">Figma</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="horizontal-padding vertical-padding">
+            <section class="contactos" id="contacto">
+                <h2 class="contacto-titulo">Contacto</h2>
+                <div class="contacto-detalles">
+                    <div class="contacto-detalles-grupo">
+                        <p class="contacto-label">Direccion</p>
+                        <p class="contacto-texto">Misiones, Argentina</p>
+                    </div>
+                    <div class="contacto-detalles-grupo">
+                        <p class="contacto-label">Email:</p>
+                        <p class="contacto-texto">jorfagauto02@gmail.com</p>
+                    </div>
+                    <div class="contacto-detalles-grupo">
+                        <p class="contacto-texto">Deje su mensaje</p>
+                    </div>
+                </div>
+                <form class="contacto-formulario" netlify>
+                    <div class="contacto-formulario-grupo">
+                        <label for="name">Nombre</label>
+                        <input required type="text" name="name" id="name">
+                    </div>
+                    <div class="contacto-formulario-grupo">
+                        <label for="email">Email</label>
+                        <input required type="email" name="email" id="email">
+                    </div>
+                    <div class="contacto-formulario-grupo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea required name="mensaje" id="mensaje" rows="6"></textarea>
+                    </div>
+
+                    <button class="contacto-formulario-enviar" type="submit">Enviar</button>
+
+                </form>
+                <nav class="social">
+                    <ul class="lista-social">
+                        <li>
+                            <a href="https://github.com/Manadius" target="_blank">
+                                <img src="Imagenes/github.svg" alt="github profile">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/jorge_gauto86/" target="_blank">
+                                <img src="Imagenes/instagram.svg" alt="instagram profile">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </body>
+</html>
+
+
+
+
+<!--Cambiar la foto de prefil, distaciar el texto del icono del logo, que los colores coincidan, color del formulario, que los enlaces te abran
+otra pestaña, terminar el formulario,  -->

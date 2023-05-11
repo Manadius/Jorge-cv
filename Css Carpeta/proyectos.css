@@ -1,0 +1,144 @@
+
+
+.proyectos {
+    display: flex;
+    flex-direction: column;
+}
+
+.cuerpo-proyectos {
+    background-color:#0099ff ;
+    color: white;
+}
+
+
+/*ajustamos las olas/waves, essto lo hacemos para celulares*/
+.ola {
+    width: 100%;
+    position: relative;
+}
+
+.ola-abajo {
+    transform: scaleY(-1);
+    position: relative;
+    top: -1px;
+}
+
+
+
+.titulo-experiencia {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 25px;
+}
+
+.fecha-experiencia {
+    font-size: 25px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.empresa-experiencia {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.rol-experiencia {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.descripcion-experiencia{
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.experiencias {
+    padding: 25px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+
+@media (min-width: 950px) {
+
+    .titulo-experiencia {
+        font-size: 50px;
+        margin: 35px 0;
+    }
+    
+    .fecha-experiencia {
+        font-size: 40px;
+
+    }
+    
+    .empresa-experiencia {
+        font-size: 25px;
+    }
+    
+    .rol-experiencia {
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    .descripcion-experiencia{
+        font-size: 20px;
+        margin-top: 10px;
+        line-height: 1.3;
+    }
+
+    .experiencias {
+        padding: 0;
+    }
+
+
+    /*alineamos un poco a la derecha una de las experiencias de la izq.*/
+    .experiencia-izquierda {
+        text-align: right;
+    }
+    
+
+    .experiencia-grid {
+        display: grid;
+        grid-template-columns: auto 2px auto; /*aca estoy definiendo 3 columnas y como van a ser*/
+        gap: 20px 70px; /*separacion entre los elementos primero en vertical para sobreponer los circulos uno encima de los otros y separacion entre la linea y los elementos*/
+        padding: 70px; /*separo el contenido de los bordes*/
+        justify-content: center;
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    .linea {
+        background-color: white;
+        position: relative;
+    }
+
+    /*estos son elementos que se van a posicionar antes y despues del contenido de mi elemento, en este caso .linea*/
+    /*tambien estoy creando las pelotitas de la linea*/
+    .linea::before,
+    .linea::after  {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+
+        top: -20px;
+        left: -9px;
+    }
+
+    .linea::after {
+        top: 100%;
+        z-index: 1; /*la ultima pelotita esta escondida detras de la imagen (la ola) por lo cual le estoy dando prioridad*/
+    }
+}
+
+

@@ -1,0 +1,180 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    color: black;
+    padding-top: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Barra de navegacion o menu de arriba*/
+.encabezado {
+    box-shadow: 0 4px 5px rgb(172, 164, 149);
+    position: fixed;
+    background-color: white;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(13, 64, 206);
+    right: 50px;
+}
+
+.logo img{
+    border-radius: 50%;
+    right: 12px;
+    position: relative;
+}
+
+/*ajustando el menu */
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 0 15px;
+}
+
+.menu a{
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 50px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/*ponemos lineas debajo del menu*/
+.menu a::after {
+    content: "";
+    background-color: rgb(233, 233, 30);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 4px);
+    width: 100%;
+    height: 4px;
+
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.menu a.seleccionado::after, 
+.menu a:hover:after {
+
+    opacity: 0.7;
+}
+
+.menu a:hover {
+    color: rgb(12, 129, 129);
+}
+
+
+
+
+/*que los botones no se vean en escritorios */
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+/*adaptado a otros dispositivos */
+@media (max-width: 950px) {
+
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(36, 34, 34);
+        height: 100%;
+        overflow-y: auto;
+
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+    
+    .menu li {
+        padding: 0;
+    }
+    
+    .menu a{
+        color:white;
+        line-height: 70px;
+        font-size: 25px;
+    }
+    
+    
+    /*que los botones no se vean en escritorios */
+    .abrir-menu,.cerrar-menu {
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .cerrar-menu{
+        align-self: flex-end;
+        padding: 20px 15px;
+    }
+    
+    .menu_abierto{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .abrir-menu:focus:not(:focus-visible)
+    .cerrar-menu:focus:not(:focus-visible){
+        outline: none;
+    }
+
+
+
+    .menu a::after {
+        content: none;
+    }
+    
+
+    .menu a:hover,
+    .menu a.seleccionado {
+        color: yellow;
+    }
+    
+}
+
+
+
+/*arreglo un problema con la barra de navegacion al hacer click en cualquier
+seccion del menu*/
+section[id] {
+    scroll-margin-top: 70px;
+}
+
+/*aca hacemos que al hacer click en una seccion del menu, nos deslice en 
+lugar de llevarnos directamente*/
+html {
+    scroll-behavior: smooth;
+}

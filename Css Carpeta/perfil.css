@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*este css es para los dispositivos moviles*/
+
+.perfil-info {
+    margin-bottom: 25px;
+}
+
+.perfil-imagen-seccion {
+    position: relative;
+}
+
+.perfil-linea{
+    background-color: yellow;
+    height: 15px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+
+.perfil-imagen {
+    width: 80%;
+    max-width: 190px;
+    top: auto;
+}
+
+.perfil {
+    text-align: center;
+}
+
+.perfil-titulo {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+    color: rgb(13, 64, 206);
+    font-family: 'Noto Sans', sans-serif;;
+}
+
+.perfil-detalles {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+.perfil-boton {
+    background-color: rgb(13, 13, 104);
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 0.5em 1em; /*el padding se ajusta dependiendo del font-size*/
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 10px  auto;
+}
+
+/*le ponemos un flitro al boton*/
+.perfil-boton:hover {
+    filter: brightness(130%);
+}
+
+
+
+
+
+
+
+/*adaptado para escritorio*/
+@media (min-width: 950px) {
+
+    .perfil-detalles {
+        margin-bottom: 0px;
+    }
+    
+    
+    
+    .perfil-imagen {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .perfil {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        max-width: 980px;
+        margin: auto;
+        align-items: center;
+    }
+    
+    .perfil-titulo {
+        font-size: 60px 
+    }
+    
+    .perfil-detalles {
+        font-size: 25px;
+        margin: 30px 0;
+    }
+    
+    .perfil-boton {
+        font-size: 28px;
+    }
+    
+    .perfil-boton:hover {
+        filter: brightness(130%);
+    }
+}
+
+/*poniedo limites de padding para todas las secciones, en todos los dispositivos*/
+
+
+.horizontal-padding {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.vertical-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+@media (min-width: 950px) {
+    .horizontal-padding {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
+    .vertical-padding {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }    
+}
