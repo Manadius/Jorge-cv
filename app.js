@@ -17,8 +17,8 @@ const observer = new IntersectionObserver((entries) => {
         const menuLink = document.querySelector(`.menu a[href="#${id}"]`);
  
         if (entry.isIntersecting) {
-            document.querySelector(".menu a.selected").classList.remove("selected");
-            menuLink.classList.add("selected");
+            document.querySelector(".menu a.seleccionado").classList.remove("seleccionado");
+            menuLink.classList.add("seleccionado");
         }
     });
 }, 
